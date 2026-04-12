@@ -7,12 +7,14 @@
     <title>My new color CV</title>
     <!-- <link rel="stylesheet" href="red.css"> -->
     <link id="theme" rel="stylesheet" href="red.css">
-    <script>
-        setInterval(() => { theme.href = theme.href.includes("red.css") ? "green.css" : "red.css"; }, 3000);
-    </script>
+    <!-- <script>
+        // setInterval(() => { theme.href = theme.href.includes("red.css") ? "green.css" : "red.css"; }, 3000);
+    </script> -->
+    <script src="script.js"> </script>
 </head>
 
 <body>
+    <button onclick="toggleTheme()">Zmienić stronę</button>
     <header>
         <h1>Yurii Yurov. CV</h1>
     </header>
@@ -23,11 +25,14 @@
         <h2>O mnie:</h2>
         <p>Urodziłem się na Ukrainie. Mieszkam i studjuję w Polsce</p>
         <h2>Umiejętności</h2>
-        <ul>Gram w piłkę nożną</ul>
-        <ul>jeżdżę samochodem</ul>
-        <ul>Gram w gry computerowe</ul>
-        <ul>Chodzę na ryby</ul>
-        <ul>Uczę się różnych języków</ul>
+        <details>
+            <summary>Ukryć</summary>
+            <ul>Gram w piłkę nożną</ul>
+            <ul>jeżdżę samochodem</ul>
+            <ul>Gram w gry computerowe</ul>
+            <ul>Chodzę na ryby</ul>
+            <ul>Uczę się różnych języków</ul>
+        </details>
         <h2>Doświadczenie</h2>
         <section>
             <article>
@@ -40,9 +45,12 @@
         <h2>Edukacja</h2>
         <p>Skończyłem Szkołę/liceum w Mikołajowie</p>
         <h2>Projekty</h2>
-        <ul>Kalkulator w języku C#</ul>
-        <ul>Wykresy funkcji w języku C#</ul>
-        <ul>Bankomat w języku C#</ul>
+        <details>
+            <summary>Ukryć</summary>
+            <ul>Kalkulator w języku C#</ul>
+            <ul>Wykresy funkcji w języku C#</ul>
+            <ul>Bankomat w języku C#</ul>
+        </details>
         <h2>Moje kontakty</h2>
         <a href="mailto:nedolekiy021@gmail.com">Napisz do mnie</a>
         <br>
