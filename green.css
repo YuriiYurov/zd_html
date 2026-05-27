@@ -30,5 +30,33 @@ ul {
 }
 
 article {
-    color: blue;
+    color: rgb(10, 155, 56);
+}
+
+.theme-btn {
+    background: linear-gradient(135deg, #3bf660, #0f378e);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+
+    display: block;
+    margin: 20px auto;
+}
+
+.theme-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+.theme-btn:active {
+    transform: scale(0.97);
 }

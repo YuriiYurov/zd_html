@@ -10,11 +10,13 @@
     <!-- <script>
         // setInterval(() => { theme.href = theme.href.includes("red.css") ? "green.css" : "red.css"; }, 3000);
     </script> -->
-    <script src="script.js"> </script>
+    <!-- <script src="script.js"> </script> -->
 </head>
 
 <body>
-    <button onclick="toggleTheme()">Zmienić stronę</button>
+    <button class="theme-btn" onclick="toggleTheme()">
+        🌙 Zmień motyw
+    </button>
     <header>
         <h1>Yurii Yurov. CV</h1>
     </header>
@@ -51,6 +53,25 @@
             <ul>Wykresy funkcji w języku C#</ul>
             <ul>Bankomat w języku C#</ul>
         </details>
+
+        <h2>Submit form</h2>
+        <form id="myForm">
+            <input type="text" id="name" placeholder="Imie">
+            <div class="error" id="nameError"></div>
+
+            <input type="text" id="surname" placeholder="Nazwisko">
+            <div class="error" id="surnameError"></div>
+
+            <input type="text" id="email" placeholder="Email">
+            <div class="error" id="emailError"></div>
+
+            <textarea id="message" placeholder="Wiadomość"></textarea>
+            <div class="error" id="messageError"></div>
+
+            <button type="submit">Wyślij</button>
+        </form>
+        <div id="result" class="success"></div>
+
         <h2>Moje kontakty</h2>
         <a href="mailto:nedolekiy021@gmail.com">Napisz do mnie</a>
         <br>
@@ -62,6 +83,7 @@
         <br>
         <a href="https://www.youtube.com/shorts/DU-MTt1FLzE" target="_blank" rel="noopener noreferrer">Mój youtube</a>
     </footer>
+    <script src="script.js"> </script>
 </body>
 
 </html>
