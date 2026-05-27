@@ -1,3 +1,58 @@
+// Klucz dla localStorage
+const STORAGE_KEY = 'my_todo_list';
+
+// 3. Odczyt danych po załadowaniu strony
+document.addEventListener('DOMContentLoaded', loadTasks);
+
+// Funkcja dodawania zadania
+function addTask() {
+    const input = document.getElementById('taskInput');
+    const taskText = input.value;
+
+    if (taskText === '') return; // Prosta walidacja
+
+    const tasks = getTasksFromStorage();
+    tasks.push(taskText);
+
+    // 2. Zapisywanie danych w localStorage
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+
+    input.value = '';
+    renderTasks();
+}
+
+// Pobieranie zadań z localStorage
+function getTasksFromStorage() {
+    const tasks = localStorage.getItem(STORAGE_KEY);
+    return tasks ? JSON.parse(tasks) : [];
+}
+
+// 4. Usuwanie elementu
+function deleteTask(index) {
+    const tasks = getTasksFromStorage();
+    tasks.splice(index, 1); // Usuwamy 1 element według indeksu
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+    renderTasks();
+}
+
+// 5. Wyświetlanie (renderowanie) danych
+function renderTasks() {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = '';
+    const tasks = getTasksFromStorage();
+
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `${task} <button class="delete-btn" onclick="deleteTask(${index})">Usuń</button>`;
+        taskList.appendChild(li);
+    });
+}
+
+// Ładowanie zadań przy starcie
+function loadTasks() {
+    renderTasks();
+}
+
 fetch("data.json")
     .then(res => res.json())
     .then(data => {

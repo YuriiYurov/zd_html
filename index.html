@@ -24,19 +24,17 @@
         <div>
             <img src="myphoto.jpg" alt="My cool photo">
         </div>
-        <h2>O mnie:</h2>
-        <p>Urodziłem się na Ukrainie. Mieszkam i studjuję w Polsce</p>
-        <h2>Umiejętności</h2>
-        <details>
-            <summary>Ukryć</summary>
-            <ul id="skills"></ul>
-
-            <!-- <ul>Gram w piłkę nożną</ul>
-            <ul>jeżdżę samochodem</ul>
-            <ul>Gram w gry computerowe</ul>
-            <ul>Chodzę na ryby</ul>
-            <ul>Uczę się różnych języków</ul> -->
-        </details>
+        <section>
+            <h2>O mnie:</h2>
+            <p>Urodziłem się na Ukrainie. Mieszkam i studjuję w Polsce</p>
+        </section>
+        <section>
+            <h2>Umiejętności</h2>
+            <details>
+                <summary>Ukryć</summary>
+                <ul id="skills"></ul>
+            </details>
+        </section>
         <h2>Doświadczenie</h2>
         <section>
             <article>
@@ -48,14 +46,25 @@
         </section>
         <h2>Edukacja</h2>
         <p>Skończyłem Szkołę/liceum w Mikołajowie</p>
-        <h2>Projekty</h2>
-        <details>
-            <summary>Ukryć</summary>
-            <ul id="projects"></ul>
-            <!-- <ul>Kalkulator w języku C#</ul>
-            <ul>Wykresy funkcji w języku C#</ul>
-            <ul>Bankomat w języku C#</ul> -->
-        </details>
+        <section>
+            <h2>Projekty</h2>
+
+            <details>
+                <summary>Ukryć</summary>
+                <ul id="projects"></ul>
+            </details>
+        </section>
+
+        <div class="container">
+            <h2>Moje Zdania</h2>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Dodaj nowe zdanie...">
+                <button onclick="addTask()">Dodaj</button>
+            </div>
+            <ul id="taskList">
+                <!-- Zadania będą tutaj -->
+            </ul>
+        </div>
 
         <h2>Submit form</h2>
         <form id="myForm">
