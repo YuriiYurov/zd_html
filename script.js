@@ -1,3 +1,24 @@
+fetch("data.json")
+    .then(res => res.json())
+    .then(data => {
+
+        // Umiejętności
+        const skillsList = document.getElementById("skills");
+        data.skills.forEach(skill => {
+            const li = document.createElement("li");
+            li.textContent = skill;
+            skillsList.appendChild(li);
+        });
+        //Projekty
+        const projectsList = document.getElementById("projects");
+        data.projects.forEach(project => {
+            const li = document.createElement("li");
+            li.textContent = project.title + " — " + project.desc;
+            projectsList.appendChild(li);
+        });
+    })
+    .catch(err => console.log("Błąd ładowania:", err));
+
 let isRed = true;
 function toggleTheme() {
     const theme = document.getElementById("theme");

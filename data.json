@@ -1,0 +1,23 @@
+{
+    "skills": [
+        "Gram w piłkę nożną",
+        "jeżdżę samochodem",
+        "Gram w gry computerowe",
+        "Chodzę na ryby",
+        "Uczę się różnych języków"
+    ],
+    "projects": [
+        {
+            "title": "Projekt C#",
+            "desc": "Kalkulator w języku C#"
+        },
+        {
+            "title": "Projekt C#",
+            "desc": "Wykresy funkcji w języku C#"
+        },
+        {
+            "title": "Projekt C#",
+            "desc": "Bankomat w języku C#"
+        }
+    ]
+}
